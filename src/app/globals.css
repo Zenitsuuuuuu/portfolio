@@ -89,7 +89,7 @@ body {
 
 input:checked + .slider {
 
-  background-color: #edcd42;
+  background-color: #df9a0a;
 }
 
 input:checked + .slider:before {
@@ -103,4 +103,32 @@ input:checked + .slider:before {
 
 .slider.round:before {
   border-radius: 50%;
+}
+
+.animated-box {
+  opacity: 0; /* Initially hidden */
+  transform: translateX(-100px); /* Start off-screen */
+  transition: transform 0.5s ease-out, opacity 0.5s ease-out;
+}
+
+.animated-box.show {
+  opacity: 1;
+  transform: translateX(0); /* Moves into place */
+}
+
+.animated-box.reverse {
+  opacity: 0;
+  transform: translateX(-100px); /* Moves back */
+}
+
+.animated-box-right {
+  transform: translateX(100px); /* Start off-screen from the right */
+}
+
+.animated-box-right.show {
+  transform: translateX(0); /* Moves into place */
+}
+
+.animated-box-right.reverse {
+  transform: translateX(100px); /* Moves back */
 }
